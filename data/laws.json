@@ -1,0 +1,37 @@
+[
+  {
+    "name_bn": "ভোক্তা-অধিকার সংরক্ষণ আইন, ২০০৯",
+    "name_en": "Consumer Rights Protection Act, 2009",
+    "act_no": "২০০৯ সালের ২৬ নং আইন",
+    "keywords": ["দ্রব্যমূল্য", "ভোক্তা", "বাজার", "ভেজাল", "সিন্ডিকেট"],
+    "official_url": "http://bdlaws.minlaw.gov.bd/act-1022.html"
+  },
+  {
+    "name_bn": "প্রতিযোগিতা আইন, ২০১২",
+    "name_en": "Competition Act, 2012",
+    "act_no": "২০১২ সালের ২৩ নং আইন",
+    "keywords": ["প্রতিযোগিতা", "সিন্ডিকেট", "একচেটিয়া", "বাজার"],
+    "official_url": "http://bdlaws.minlaw.gov.bd/act-1090.html"
+  },
+  {
+    "name_bn": "সাইবার নিরাপত্তা আইন, ২০২৩",
+    "name_en": "Cyber Security Act, 2023",
+    "act_no": "২০২৩ সালের ৩৭ নং আইন",
+    "keywords": ["সাইবার", "অনলাইন", "অপরাধ", "ডিজিটাল"],
+    "official_url": "http://bdlaws.minlaw.gov.bd/"
+  },
+  {
+    "name_bn": "পরিবেশ সংরক্ষণ আইন, ১৯৯৫",
+    "name_en": "Environment Conservation Act, 1995",
+    "act_no": "১৯৯৫ সালের ১ নং আইন",
+    "keywords": ["পরিবেশ", "দূষণ", "জলবায়ু", "বর্জ্য"],
+    "official_url": "http://bdlaws.minlaw.gov.bd/act-791.html"
+  },
+  {
+    "name_bn": "দুনীতি দমন কমিশন আইন, ২০০৪",
+    "name_en": "Anti-Corruption Commission Act, 2004",
+    "act_no": "২০০৪ সালের ৫ নং আইন",
+    "keywords": ["দুর্নীতি", "অর্থপাচার", "ঘুষ"],
+    "official_url": "http://bdlaws.minlaw.gov.bd/act-910.html"
+  }
+]

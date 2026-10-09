@@ -14,15 +14,15 @@ from utils.gemini_helper import (
     prompt_international_law,
     prompt_comparative_countries,
     prompt_government_response,
+    prompt_english_essay,
     prompt_final_synthesis,
     build_enhance_prompt,
-    prompt_hook_essay,
     generate,
 )
 
 st.set_page_config(page_title="BCS Master Note Generator", layout="wide", page_icon="📘")
 st.title("📘 BCS Master Note Generator")
-st.caption("টপিক/আর্টিকেল/PDF/URL দাও এবং সম্পূর্ণ গবেষণাধর্মী Master Note পাও")
+st.caption("টপিক/আর্টিকেল/PDF/URL দাও এবং সম্পূর্ণ গবেষণাধর্মী Master Note + English Essay পাও")
 
 
 def init_session():
@@ -92,10 +92,12 @@ st.sidebar.header("✍️ মোড")
 
 app_mode = st.sidebar.radio(
     "কী করতে চাও?",
-    ["Master Note (সম্পূর্ণ বিশ্লেষণ)", "Quick Enhance (দ্রুত)", "English Hook Essay (Hook+4+4+4+Conclusion)"]
+    ["Master Note (সম্পূর্ণ বিশ্লেষণ)", "Quick Enhance (দ্রুত)"]
 )
 
 length_mode = st.sidebar.selectbox("দৈর্ঘ্য (Quick Enhance মোডে)", ["short", "medium", "long"], index=1)
+
+include_english_essay = st.sidebar.checkbox("✍️ English Essay (Hook+4+4+4) যোগ করো", value=True)
 
 
 # ================= LOAD INSTITUTIONS =================
@@ -185,9 +187,6 @@ if app_mode == "Master Note (সম্পূর্ণ বিশ্লেষণ)"
             model = genai.GenerativeModel(model_name)
             relevant = retrieve_relevant(user_text, institutions)
 
-            progress_bar = st.progress(0, text="শুরু হচ্ছে...")
-            sections = {}
-
             step_list = [
                 ("breakdown", "বিষয় বিশ্লেষণ", prompt_topic_breakdown(user_text)),
                 ("law", "বাংলাদেশের আইন ম্যাপিং", prompt_bd_law_mapping(user_text, relevant)),
@@ -197,8 +196,14 @@ if app_mode == "Master Note (সম্পূর্ণ বিশ্লেষণ)"
                 ("govt", "সরকারের পদক্ষেপ", prompt_government_response(user_text, relevant)),
             ]
 
-            total_steps = len(step_list) + 1
+            extra_steps = 1  # final synthesis
+            if include_english_essay:
+                extra_steps = extra_steps + 1
+
+            total_steps = len(step_list) + extra_steps
             current_step = 0
+            progress_bar = st.progress(0, text="শুরু হচ্ছে...")
+            sections = {}
 
             for step_key, step_label, step_prompt in step_list:
                 progress_fraction = current_step / total_steps
@@ -206,9 +211,17 @@ if app_mode == "Master Note (সম্পূর্ণ বিশ্লেষণ)"
                 sections[step_key] = safe_generate(model, step_prompt, step_label)
                 current_step = current_step + 1
 
+            combined_so_far = "\n\n".join(sections.values())
+
+            if include_english_essay:
+                progress_bar.progress(current_step / total_steps, text="জেনারেট হচ্ছে: English Essay (Hook+4+4+4)")
+                essay_prompt = prompt_english_essay(user_text, combined_so_far)
+                sections["english_essay"] = safe_generate(model, essay_prompt, "English Essay")
+                current_step = current_step + 1
+
             progress_bar.progress(current_step / total_steps, text="Final Summary তৈরি হচ্ছে...")
-            combined_text = "\n\n".join(sections.values())
-            synthesis_prompt = prompt_final_synthesis(user_text, combined_text)
+            final_combined_text = "\n\n".join(sections.values())
+            synthesis_prompt = prompt_final_synthesis(user_text, final_combined_text)
             synthesis_result = safe_generate(model, synthesis_prompt, "Final Synthesis")
 
             progress_bar.progress(1.0, text="সম্পন্ন!")
@@ -222,6 +235,9 @@ if app_mode == "Master Note (সম্পূর্ণ বিশ্লেষণ)"
             final_note = final_note + sections.get("comparative", "") + "\n\n---\n\n"
             final_note = final_note + sections.get("govt", "")
 
+            if include_english_essay:
+                final_note = final_note + "\n\n---\n\n" + sections.get("english_essay", "")
+
             st.session_state.sections = sections
             st.session_state.final_note = final_note
 
@@ -230,6 +246,12 @@ if app_mode == "Master Note (সম্পূর্ণ বিশ্লেষণ)"
 
         tab_names = ["সম্পূর্ণ Note", "বিষয় বিশ্লেষণ", "আইন", "সংবিধান",
                      "আন্তর্জাতিক আইন", "দেশের দৃষ্টান্ত", "সরকারের পদক্ষেপ"]
+        section_keys = ["breakdown", "law", "constitution", "intl_law", "comparative", "govt"]
+
+        if "english_essay" in st.session_state.sections:
+            tab_names.append("English Essay")
+            section_keys.append("english_essay")
+
         tabs = st.tabs(tab_names)
 
         with tabs[0]:
@@ -242,7 +264,6 @@ if app_mode == "Master Note (সম্পূর্ণ বিশ্লেষণ)"
                 mime="text/markdown"
             )
 
-        section_keys = ["breakdown", "law", "constitution", "intl_law", "comparative", "govt"]
         tab_index = 1
         for key in section_keys:
             with tabs[tab_index]:
@@ -270,50 +291,7 @@ if app_mode == "Quick Enhance (দ্রুত)":
                     st.download_button("📥 Download", result, file_name="enhanced.txt")
                 except Exception as e:
                     st.error("Error: " + str(e))
-# ================= MODE 3: ENGLISH HOOK ESSAY =================
-if app_mode == "English Hook Essay (Hook+4+4+4+Conclusion)":
 
-    st.info("এই মোড Hook + 4 points + 4 points + 4 points + Conclusion স্টাইলে sophisticated vocabulary ও clause ব্যবহার করে একটা exam-ready English essay তৈরি করবে।")
-
-    hook_essay_clicked = st.button("✍️ Hook Essay তৈরি করো", type="primary", use_container_width=True)
-
-    if hook_essay_clicked:
-        valid = inputs_are_valid()
-        if valid:
-            with st.spinner("Crafting your essay with sophisticated vocabulary..."):
-                try:
-                    genai.configure(api_key=api_key)
-                    model = genai.GenerativeModel(model_name)
-                    relevant = retrieve_relevant(user_text, institutions)
-                    essay_prompt = prompt_hook_essay(user_text, relevant)
-                    essay_result = generate(model, essay_prompt)
-                    st.markdown(essay_result)
-
-                    file_timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-                    st.download_button(
-                        "📥 Download Essay",
-                        essay_result,
-                        file_name="hook_essay_" + file_timestamp + ".txt",
-                        mime="text/plain"
-                    )
-
-                    try:
-                        entry = {
-                            "time": str(datetime.datetime.now()),
-                            "mode": "hook_essay",
-                            "input": user_text[:1500],
-                            "output": essay_result
-                        }
-                        history = []
-                        if os.path.exists("history.json"):
-                            history = json.load(open("history.json", encoding="utf-8"))
-                        history.append(entry)
-                        json.dump(history, open("history.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
-                    except Exception:
-                        pass
-
-                except Exception as e:
-                    st.error("Error: " + str(e))
 
 # ================= SIDEBAR EXTRAS =================
 st.sidebar.markdown("---")
