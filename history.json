@@ -1,0 +1,199 @@
+{
+  "sdg_reference": {
+    "1": "দারিদ্র্য বিমোচন",
+    "2": "ক্ষুধামুক্তি",
+    "3": "সুস্বাস্থ্য ও কল্যাণ",
+    "4": "মানসম্মত শিক্ষা",
+    "5": "লিঙ্গ সমতা",
+    "6": "বিশুদ্ধ পানি ও স্যানিটেশন",
+    "7": "সাশ্রয়ী ও টেকসই জ্বালানি",
+    "8": "শোভন কাজ ও অর্থনৈতিক প্রবৃদ্ধি",
+    "9": "শিল্প, উদ্ভাবন ও অবকাঠামো",
+    "10": "অসমতা হ্রাস",
+    "11": "টেকসই নগর ও জনপদ",
+    "12": "দায়িত্বশীল ভোগ ও উৎপাদন",
+    "13": "জলবায়ু কার্যক্রম",
+    "14": "জলজ জীবন",
+    "15": "স্থলজ জীবন",
+    "16": "শান্তি, ন্যায়বিচার ও শক্তিশালী প্রতিষ্ঠান",
+    "17": "অভিষ্ট অর্জনে অংশীদারিত্ব"
+  },
+
+  "international_law_reference": {
+    "UDHR": "বিশ্ব মানবাধিকার ঘোষণাপত্র (1948)",
+    "ICCPR": "নাগরিক ও রাজনৈতিক অধিকার সংক্রান্ত আন্তর্জাতিক সনদ",
+    "ICESCR": "অর্থনৈতিক, সামাজিক ও সাংস্কৃতিক অধিকার সনদ",
+    "CEDAW": "নারীর প্রতি সকল প্রকার বৈষম্য বিলোপ সনদ (1979)",
+    "CRC": "জাতিসংঘ শিশু অধিকার সনদ (1989)",
+    "CRPD": "প্রতিবন্ধী ব্যক্তিদের অধিকার সনদ",
+    "UNCAC": "জাতিসংঘ দুর্নীতি-বিরোধী সনদ (2003)",
+    "UNFCCC": "জলবায়ু পরিবর্তন সংক্রান্ত জাতিসংঘ কাঠামো সনদ",
+    "Paris_Agreement": "প্যারিস জলবায়ু চুক্তি (2015)",
+    "CBD": "জৈব বৈচিত্র্য সংক্রান্ত আন্তর্জাতিক সনদ",
+    "UNCLOS": "সমুদ্র আইন সংক্রান্ত জাতিসংঘ সনদ",
+    "ILO_C87": "সংগঠন করার স্বাধীনতা সনদ (ILO Convention 87)",
+    "ILO_C98": "সংগঠিত হওয়া ও দরকষাকষির অধিকার সনদ (ILO 98)",
+    "ILO_C182": "শিশুশ্রমের নিকৃষ্টতম রূপ বিলোপ সনদ (ILO 182)",
+    "Sendai_Framework": "দুর্যোগ ঝুঁকি হ্রাস বিষয়ক সেন্দাই কাঠামো",
+    "WTO_Agreements": "বিশ্ব বাণিজ্য সংস্থার চুক্তিসমূহ",
+    "ITU_Regulations": "আন্তর্জাতিক টেলিযোগাযোগ ইউনিয়ন প্রবিধান",
+    "IHR": "আন্তর্জাতিক স্বাস্থ্য প্রবিধান (WHO, 2005)"
+  },
+
+  "institutions": [
+    {
+      "id": "dncrp",
+      "name_bn": "জাতীয় ভোক্তা-অধিকার সংরক্ষণ অধিদপ্তর",
+      "name_en": "National Consumer Rights Protection Directorate",
+      "abbr": "DNCRP",
+      "ministry": "বাণিজ্য মন্ত্রণালয়",
+      "type": "directorate",
+      "established": 2009,
+      "role": "বাজার মনিটরিং, ভেজাল ও মূল্য কারসাজি রোধ",
+      "keywords": ["দ্রব্যমূল্য", "সিন্ডিকেট", "ভেজাল", "বাজার", "consumer"],
+      "sdg": [12, 2],
+      "international_law": ["WTO_Agreements"],
+      "complaint_channel": { "hotline": "16121", "website": "dncrp.gov.bd" }
+    },
+    {
+      "id": "bcc",
+      "name_bn": "বাংলাদেশ প্রতিযোগিতা কমিশন",
+      "name_en": "Bangladesh Competition Commission",
+      "abbr": "BCC",
+      "ministry": "বাণিজ্য মন্ত্রণালয়",
+      "type": "commission",
+      "established": 2016,
+      "role": "বাজারে অসাধু প্রতিযোগিতা ও সিন্ডিকেট রোধ",
+      "keywords": ["সিন্ডিকেট", "প্রতিযোগিতা", "market"],
+      "sdg": [12, 16],
+      "international_law": ["WTO_Agreements"],
+      "complaint_channel": { "website": "bcc.gov.bd" }
+    },
+    {
+      "id": "nbr",
+      "name_bn": "জাতীয় রাজস্ব বোর্ড",
+      "name_en": "National Board of Revenue",
+      "abbr": "NBR",
+      "ministry": "অর্থ মন্ত্রণালয়",
+      "type": "board",
+      "established": 1972,
+      "role": "রাজস্ব আদায়, কর ও ভ্যাট ব্যবস্থাপনা, অটোমেশন",
+      "keywords": ["রাজস্ব", "কর", "ভ্যাট", "tax", "revenue"],
+      "sdg": [1, 17],
+      "international_law": ["WTO_Agreements"],
+      "complaint_channel": { "website": "nbr.gov.bd" }
+    },
+    {
+      "id": "btrc",
+      "name_bn": "বাংলাদেশ টেলিযোগাযোগ নিয়ন্ত্রণ কমিশন",
+      "name_en": "Bangladesh Telecommunication Regulatory Commission",
+      "abbr": "BTRC",
+      "ministry": "ডাক ও টেলিযোগাযোগ মন্ত্রণালয়",
+      "type": "commission",
+      "established": 2002,
+      "role": "টেলিকম নিয়ন্ত্রণ ও সাইবার মনিটরিং",
+      "keywords": ["সাইবার", "ফেক নিউজ", "অনলাইন", "cyber"],
+      "sdg": [9, 16],
+      "international_law": ["ITU_Regulations"],
+      "complaint_channel": { "hotline": "100", "website": "btrc.gov.bd" }
+    },
+    {
+      "id": "acc",
+      "name_bn": "দুর্নীতি দমন কমিশন",
+      "name_en": "Anti-Corruption Commission",
+      "abbr": "ACC",
+      "ministry": "সংবিধিবদ্ধ সংস্থা",
+      "type": "commission",
+      "established": 2004,
+      "role": "দুর্নীতি তদন্ত ও প্রতিরোধ",
+      "keywords": ["দুর্নীতি", "ঘুষ", "corruption"],
+      "sdg": [16],
+      "international_law": ["UNCAC"],
+      "complaint_channel": { "hotline": "106", "website": "acc.gov.bd" }
+    },
+    {
+      "id": "doe",
+      "name_bn": "বাংলাদেশ পরিবেশ অধিদপ্তর",
+      "name_en": "Department of Environment",
+      "abbr": "DoE",
+      "ministry": "পরিবেশ, বন ও জলবায়ু পরিবর্তন মন্ত্রণালয়",
+      "type": "directorate",
+      "established": 1989,
+      "role": "পরিবেশ দূষণ নিয়ন্ত্রণ ও ছাড়পত্র প্রদান",
+      "keywords": ["পরিবেশ", "দূষণ", "জলবায়ু", "নদী", "environment"],
+      "sdg": [6, 13, 14, 15],
+      "international_law": ["UNFCCC", "Paris_Agreement", "CBD"],
+      "complaint_channel": { "hotline": "16102", "website": "doe.gov.bd" }
+    },
+    {
+      "id": "nhrc",
+      "name_bn": "জাতীয় মানবাধিকার কমিশন",
+      "name_en": "National Human Rights Commission",
+      "abbr": "NHRC",
+      "ministry": "সংবিধিবদ্ধ সংস্থা",
+      "type": "commission",
+      "established": 2009,
+      "role": "মানবাধিকার লঙ্ঘন তদন্ত",
+      "keywords": ["মানবাধিকার", "নির্যাতন", "human rights"],
+      "sdg": [16, 10],
+      "international_law": ["UDHR", "ICCPR", "ICESCR"],
+      "complaint_channel": { "website": "nhrc.gov.bd" }
+    },
+
+    { "id": "dae", "name_bn": "কৃষি সম্প্রসারণ অধিদপ্তর", "name_en": "Department of Agricultural Extension", "abbr": "DAE", "ministry": "কৃষি মন্ত্রণালয়", "type": "directorate", "role": "কৃষকদের প্রশিক্ষণ, বীজ-সার সহায়তা, ফসল সম্প্রসারণ সেবা", "keywords": ["কৃষি", "ফসল", "সার", "বীজ", "agriculture"], "sdg": [2, 1], "international_law": [], "complaint_channel": { "website": "dae.gov.bd" } },
+
+    { "id": "bari", "name_bn": "বাংলাদেশ কৃষি গবেষণা ইনস্টিটিউট", "name_en": "Bangladesh Agricultural Research Institute", "abbr": "BARI", "ministry": "কৃষি মন্ত্রণালয়", "type": "institute", "role": "কৃষি প্রযুক্তি ও নতুন জাত উদ্ভাবন গবেষণা", "keywords": ["গবেষণা", "ফসলের জাত", "agriculture research"], "sdg": [2, 9], "international_law": [], "complaint_channel": { "website": "bari.gov.bd" } },
+
+    { "id": "brri", "name_bn": "বাংলাদেশ ধান গবেষণা ইনস্টিটিউট", "name_en": "Bangladesh Rice Research Institute", "abbr": "BRRI", "ministry": "কৃষি মন্ত্রণালয়", "type": "institute", "role": "ধানের নতুন জাত ও উৎপাদন প্রযুক্তি উদ্ভাবন", "keywords": ["ধান", "চাল", "rice"], "sdg": [2], "international_law": [], "complaint_channel": { "website": "brri.gov.bd" } },
+
+    { "id": "badc", "name_bn": "বাংলাদেশ কৃষি উন্নয়ন কর্পোরেশন", "name_en": "Bangladesh Agricultural Development Corporation", "abbr": "BADC", "ministry": "কৃষি মন্ত্রণালয়", "type": "corporation", "role": "বীজ, সার ও সেচ সরবরাহ ব্যবস্থাপনা", "keywords": ["সার", "বীজ", "সেচ", "fertilizer"], "sdg": [2], "international_law": [], "complaint_channel": { "website": "badc.gov.bd" } },
+
+    { "id": "dof", "name_bn": "মৎস্য অধিদপ্তর", "name_en": "Department of Fisheries", "abbr": "DoF", "ministry": "মৎস্য ও প্রাণিসম্পদ মন্ত্রণালয়", "type": "directorate", "role": "মৎস্য সম্পদ উন্নয়ন ও সংরক্ষণ", "keywords": ["মাছ", "নদী", "জলাশয়", "fisheries"], "sdg": [14, 2], "international_law": ["UNCLOS"], "complaint_channel": { "website": "fisheries.gov.bd" } },
+
+    { "id": "dls", "name_bn": "প্রাণিসম্পদ অধিদপ্তর", "name_en": "Department of Livestock Services", "abbr": "DLS", "ministry": "মৎস্য ও প্রাণিসম্পদ মন্ত্রণালয়", "type": "directorate", "role": "প্রাণিসম্পদ স্বাস্থ্যসেবা ও উৎপাদন বৃদ্ধি", "keywords": ["গবাদি পশু", "টিকা", "livestock"], "sdg": [2, 3], "international_law": [], "complaint_channel": { "website": "dls.gov.bd" } },
+
+    { "id": "dghs", "name_bn": "স্বাস্থ্য অধিদপ্তর", "name_en": "Directorate General of Health Services", "abbr": "DGHS", "ministry": "স্বাস্থ্য ও পরিবার কল্যাণ মন্ত্রণালয়", "type": "directorate", "role": "সরকারি হাসপাতাল ব্যবস্থাপনা, রোগ নিয়ন্ত্রণ, মহামারি মোকাবিলা", "keywords": ["হাসপাতাল", "ডাক্তার", "রোগ", "health"], "sdg": [3], "international_law": ["IHR"], "complaint_channel": { "hotline": "16263", "website": "dghs.gov.bd" } },
+
+    { "id": "dgfp", "name_bn": "পরিবার পরিকল্পনা অধিদপ্তর", "name_en": "Directorate General of Family Planning", "abbr": "DGFP", "ministry": "স্বাস্থ্য ও পরিবার কল্যাণ মন্ত্রণালয়", "type": "directorate", "role": "মাতৃস্বাস্থ্য ও পরিবার পরিকল্পনা সেবা", "keywords": ["মাতৃস্বাস্থ্য", "পরিবার পরিকল্পনা"], "sdg": [3, 5], "international_law": ["ICESCR"], "complaint_channel": { "website": "dgfp.gov.bd" } },
+
+    { "id": "dgda", "name_bn": "ঔষধ প্রশাসন অধিদপ্তর", "name_en": "Directorate General of Drug Administration", "abbr": "DGDA", "ministry": "স্বাস্থ্য ও পরিবার কল্যাণ মন্ত্রণালয়", "type": "directorate", "role": "ওষুধের মান নিয়ন্ত্রণ ও নকল ওষুধ প্রতিরোধ", "keywords": ["ওষুধ", "নকল ওষুধ", "drug"], "sdg": [3], "international_law": ["IHR"], "complaint_channel": { "website": "dgda.gov.bd" } },
+
+    { "id": "niport", "name_bn": "জাতীয় জনসংখ্যা গবেষণা ও প্রশিক্ষণ ইনস্টিটিউট", "name_en": "National Institute of Population Research and Training", "abbr": "NIPORT", "ministry": "স্বাস্থ্য ও পরিবার কল্যাণ মন্ত্রণালয়", "type": "institute", "role": "জনসংখ্যা ও জনস্বাস্থ্য গবেষণা", "keywords": ["জনসংখ্যা", "population"], "sdg": [3], "international_law": [], "complaint_channel": { "website": "niport.gov.bd" } },
+
+    { "id": "dpe", "name_bn": "প্রাথমিক শিক্ষা অধিদপ্তর", "name_en": "Directorate of Primary Education", "abbr": "DPE", "ministry": "প্রাথমিক ও গণশিক্ষা মন্ত্রণালয়", "type": "directorate", "role": "প্রাথমিক বিদ্যালয় ব্যবস্থাপনা ও মানোন্নয়ন", "keywords": ["প্রাথমিক বিদ্যালয়", "শিক্ষক", "primary education"], "sdg": [4], "international_law": ["CRC"], "complaint_channel": { "website": "dpe.gov.bd" } },
+
+    { "id": "dshe", "name_bn": "মাধ্যমিক ও উচ্চ শিক্ষা অধিদপ্তর", "name_en": "Directorate of Secondary and Higher Education", "abbr": "DSHE", "ministry": "শিক্ষা মন্ত্রণালয়", "type": "directorate", "role": "মাধ্যমিক ও কলেজ শিক্ষা ব্যবস্থাপনা", "keywords": ["স্কুল", "কলেজ", "শিক্ষক নিবন্ধন"], "sdg": [4], "international_law": ["CRC"], "complaint_channel": { "website": "dshe.gov.bd" } },
+
+    { "id": "banbeis", "name_bn": "বাংলাদেশ শিক্ষা তথ্য ও পরিসংখ্যান ব্যুরো", "name_en": "Bangladesh Bureau of Educational Information and Statistics", "abbr": "BANBEIS", "ministry": "শিক্ষা মন্ত্রণালয়", "type": "bureau", "role": "শিক্ষা বিষয়ক তথ্য-উপাত্ত সংরক্ষণ", "keywords": ["শিক্ষা পরিসংখ্যান", "education data"], "sdg": [4], "international_law": [], "complaint_channel": { "website": "banbeis.gov.bd" } },
+
+    { "id": "ugc", "name_bn": "বিশ্ববিদ্যালয় মঞ্জুরি কমিশন", "name_en": "University Grants Commission", "abbr": "UGC", "ministry": "শিক্ষা মন্ত্রণালয়", "type": "commission", "role": "বিশ্ববিদ্যালয় মান নিয়ন্ত্রণ ও তহবিল বরাদ্দ", "keywords": ["বিশ্ববিদ্যালয়", "ভর্তি জালিয়াতি", "university"], "sdg": [4], "international_law": [], "complaint_channel": { "website": "ugc.gov.bd" } },
+
+    { "id": "dte", "name_bn": "কারিগরি শিক্ষা অধিদপ্তর", "name_en": "Directorate of Technical Education", "abbr": "DTE", "ministry": "শিক্ষা মন্ত্রণালয়", "type": "directorate", "role": "কারিগরি ও বৃত্তিমূলক শিক্ষা পরিচালনা", "keywords": ["পলিটেকনিক", "কারিগরি শিক্ষা"], "sdg": [4, 8], "international_law": [], "complaint_channel": { "website": "dte.gov.bd" } },
+
+    { "id": "dwa", "name_bn": "মহিলা বিষয়ক অধিদপ্তর", "name_en": "Department of Women Affairs", "abbr": "DWA", "ministry": "মহিলা ও শিশু বিষয়ক মন্ত্রণালয়", "type": "directorate", "role": "নারীর ক্ষমতায়ন, নির্যাতন প্রতিরোধ, ভাতা প্রদান", "keywords": ["নারী নির্যাতন", "যৌতুক", "নারী ক্ষমতায়ন", "women"], "sdg": [5, 10], "international_law": ["CEDAW"], "complaint_channel": { "hotline": "109", "website": "dwa.gov.bd" } },
+
+    { "id": "shishu-academy", "name_bn": "বাংলাদেশ শিশু একাডেমি", "name_en": "Bangladesh Shishu Academy", "abbr": "BSA", "ministry": "মহিলা ও শিশু বিষয়ক মন্ত্রণালয়", "type": "academy", "role": "শিশুর মেধা বিকাশ ও সৃজনশীলতা চর্চা", "keywords": ["শিশু", "শিশু অধিকার", "child"], "sdg": [4, 16], "international_law": ["CRC"], "complaint_channel": { "website": "shishuacademy.gov.bd" } },
+
+    { "id": "dss", "name_bn": "সমাজসেবা অধিদপ্তর", "name_en": "Department of Social Services", "abbr": "DSS", "ministry": "সমাজকল্যাণ মন্ত্রণালয়", "type": "directorate", "role": "শিশু সুরক্ষা, ভাতা, প্রতিবন্ধী ও বয়স্ক কল্যাণ", "keywords": ["শিশু নির্যাতন", "ভাতা", "প্রতিবন্ধী", "child protection"], "sdg": [1, 10, 16], "international_law": ["CRC", "CRPD"], "complaint_channel": { "hotline": "1098", "website": "dss.gov.bd" } },
+
+    { "id": "dol", "name_bn": "শ্রম অধিদপ্তর", "name_en": "Department of Labour", "abbr": "DoL", "ministry": "শ্রম ও কর্মসংস্থান মন্ত্রণালয়", "type": "directorate", "role": "শ্রমিক অধিকার, ট্রেড ইউনিয়ন নিবন্ধন, শ্রম আইন প্রয়োগ", "keywords": ["শ্রমিক", "বেতন", "কারখানা", "labour"], "sdg": [8], "international_law": ["ILO_C87", "ILO_C98", "ILO_C182"], "complaint_channel": { "website": "dol.gov.bd" } },
+
+    { "id": "bmet", "name_bn": "জনশক্তি কর্মসংস্থান ও প্রশিক্ষণ ব্যুরো", "name_en": "Bureau of Manpower, Employment and Training", "abbr": "BMET", "ministry": "প্রবাসী কল্যাণ ও বৈদেশিক কর্মসংস্থান মন্ত্রণালয়", "type": "bureau", "role": "বিদেশে কর্মী প্রেরণ নিয়ন্ত্রণ ও প্রতারণা প্রতিরোধ", "keywords": ["বিদেশ যাওয়া", "ভিসা প্রতারণা", "migrant worker"], "sdg": [8, 10], "international_law": ["ILO_C87"], "complaint_channel": { "website": "bmet.gov.bd" } },
+
+    { "id": "ddm", "name_bn": "দুর্যোগ ব্যবস্থাপনা অধিদপ্তর", "name_en": "Department of Disaster Management", "abbr": "DDM", "ministry": "দুর্যোগ ব্যবস্থাপনা ও ত্রাণ মন্ত্রণালয়", "type": "directorate", "role": "দুর্যোগ পূর্বাভাস, ত্রাণ বিতরণ, পুনর্বাসন", "keywords": ["বন্যা", "ঘূর্ণিঝড়", "ত্রাণ", "disaster"], "sdg": [11, 13], "international_law": ["Sendai_Framework"], "complaint_channel": { "website": "ddm.gov.bd" } },
+
+    { "id": "ec", "name_bn": "বাংলাদেশ নির্বাচন কমিশন সচিবালয়", "name_en": "Bangladesh Election Commission Secretariat", "abbr": "EC", "ministry": "সংবিধিবদ্ধ সংস্থা", "type": "commission", "role": "নির্বাচন আয়োজন, ভোটার তালিকা হালনাগাদ", "keywords": ["নির্বাচন", "ভোট", "election"], "sdg": [16], "international_law": ["ICCPR"], "complaint_channel": { "website": "ecs.gov.bd" } },
+
+    { "id": "bb", "name_bn": "বাংলাদেশ ব্যাংক", "name_en": "Bangladesh Bank", "abbr": "BB", "ministry": "অর্থ মন্ত্রণালয়", "type": "central_bank", "role": "মুদ্রানীতি, ব্যাংক নিয়ন্ত্রণ, রিজার্ভ ব্যবস্থাপনা", "keywords": ["রিজার্ভ", "ব্যাংক জালিয়াতি", "ডলার সংকট", "bank"], "sdg": [8, 1], "international_law": [], "complaint_channel": { "hotline": "16236", "website": "bb.org.bd" } },
+
+    { "id": "infocom", "name_bn": "তথ্য কমিশন", "name_en": "Information Commission", "abbr": "IC", "ministry": "সংবিধিবদ্ধ সংস্থা", "type": "commission", "role": "তথ্য অধিকার আইন বাস্তবায়ন, নাগরিকের তথ্য পাওয়ার অধিকার নিশ্চিতকরণ", "keywords": ["তথ্য অধিকার", "RTI", "স্বচ্ছতা"], "sdg": [16], "international_law": ["ICCPR"], "complaint_channel": { "website": "infocom.gov.bd" } },
+
+    { "id": "nlaso", "name_bn": "জাতীয় আইনগত সহায়তা প্রদান সংস্থা", "name_en": "National Legal Aid Services Organization", "abbr": "NLASO", "ministry": "আইন, বিচার ও সংসদ বিষয়ক মন্ত্রণালয়", "type": "organization", "role": "দরিদ্র ও অসহায় মানুষকে বিনামূল্যে আইনি সহায়তা", "keywords": ["আইনি সহায়তা", "legal aid", "বিনামূল্যে আইনজীবী"], "sdg": [16, 10], "international_law": ["ICESCR"], "complaint_channel": { "hotline": "16430", "website": "nlaso.gov.bd" } },
+
+    { "id": "dsa", "name_bn": "ডিজিটাল নিরাপত্তা এজেন্সি", "name_en": "Digital Security Agency", "abbr": "DSA", "ministry": "ডাক ও টেলিযোগাযোগ মন্ত্রণালয়", "type": "agency", "role": "সাইবার অপরাধ প্রতিরোধ, ডিজিটাল নিরাপত্তা আইন প্রয়োগ", "keywords": ["সাইবার অপরাধ", "হ্যাকিং", "cyber crime"], "sdg": [9, 16], "international_law": ["ITU_Regulations"], "complaint_channel": { "website": "dsa.gov.bd" } },
+
+    { "id": "lged", "name_bn": "স্থানীয় সরকার প্রকৌশল অধিদপ্তর", "name_en": "Local Government Engineering Department", "abbr": "LGED", "ministry": "স্থানীয় সরকার বিভাগ", "type": "directorate", "role": "গ্রামীণ রাস্তাঘাট, সেতু, ইউনিয়ন অবকাঠামো নির্মাণ", "keywords": ["রাস্তা", "সেতু", "গ্রামীণ অবকাঠামো"], "sdg": [9, 11], "international_law": [], "complaint_channel": { "website": "lged.gov.bd" } },
+
+    { "id": "bwdb", "name_bn": "বাংলাদেশ পানি উন্নয়ন বোর্ড", "name_en": "Bangladesh Water Development Board", "abbr": "BWDB", "ministry": "পানি সম্পদ মন্ত্রণালয়", "type": "board", "role": "নদী ভাঙন রোধ, বাঁধ ও সেচ ব্যবস্থাপনা", "keywords": ["নদী ভাঙন", "বাঁধ", "বন্যা নিয়ন্ত্রণ"], "sdg": [6, 13], "international_law": ["UNFCCC"], "complaint_channel": { "website": "bwdb.gov.bd" } }
+  ]
+}

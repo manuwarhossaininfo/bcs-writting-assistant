@@ -1,0 +1,6 @@
+streamlit
+google-generativeai
+pdfplumber
+beautifulsoup4
+requests
+python-docx

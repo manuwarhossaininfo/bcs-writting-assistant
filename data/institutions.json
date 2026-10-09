@@ -1,0 +1,65 @@
+[
+  {
+    "name_bn": "জাতীয় ভোক্তা-অধিকার সংরক্ষণ অধিদপ্তর",
+    "name_en": "National Consumer Rights Protection Directorate",
+    "abbr": "DNCRP",
+    "ministry": "বাণিজ্য মন্ত্রণালয়",
+    "type": "directorate",
+    "role": "বাজার মনিটরিং, ভেজাল ও মূল্য কারসাজি রোধ",
+    "keywords": ["দ্রব্যমূল্য", "সিন্ডিকেট", "ভেজাল", "বাজার", "consumer"]
+  },
+  {
+    "name_bn": "বাংলাদেশ প্রতিযোগিতা কমিশন",
+    "name_en": "Bangladesh Competition Commission",
+    "abbr": "BCC",
+    "ministry": "বাণিজ্য মন্ত্রণালয়",
+    "type": "commission",
+    "role": "বাজারে অসাধু প্রতিযোগিতা ও সিন্ডিকেট রোধ",
+    "keywords": ["সিন্ডিকেট", "প্রতিযোগিতা", "market"]
+  },
+  {
+    "name_bn": "জাতীয় রাজস্ব বোর্ড",
+    "name_en": "National Board of Revenue",
+    "abbr": "NBR",
+    "ministry": "অর্থ মন্ত্রণালয়",
+    "type": "board",
+    "role": "রাজস্ব আদায়, কর ও ভ্যাট ব্যবস্থাপনা, অটোমেশন",
+    "keywords": ["রাজস্ব", "কর", "ভ্যাট", "tax", "revenue"]
+  },
+  {
+    "name_bn": "বাংলাদেশ টেলিযোগাযোগ নিয়ন্ত্রণ কমিশন",
+    "name_en": "Bangladesh Telecommunication Regulatory Commission",
+    "abbr": "BTRC",
+    "ministry": "ডাক ও টেলিযোগাযোগ মন্ত্রণালয়",
+    "type": "commission",
+    "role": "টেলিকম নিয়ন্ত্রণ ও সাইবার মনিটরিং",
+    "keywords": ["সাইবার", "ফেক নিউজ", "অনলাইন", "cyber"]
+  },
+  {
+    "name_bn": "দুর্নীতি দমন কমিশন",
+    "name_en": "Anti-Corruption Commission",
+    "abbr": "ACC",
+    "ministry": "সংবিধিবদ্ধ সংস্থা",
+    "type": "commission",
+    "role": "দুর্নীতি তদন্ত ও প্রতিরোধ",
+    "keywords": ["দুর্নীতি", "corruption"]
+  },
+  {
+    "name_bn": "বাংলাদেশ পরিবেশ অধিদপ্তর",
+    "name_en": "Department of Environment",
+    "abbr": "DoE",
+    "ministry": "পরিবেশ, বন ও জলবায়ু পরিবর্তন মন্ত্রণালয়",
+    "type": "directorate",
+    "role": "পরিবেশ দূষণ নিয়ন্ত্রণ ও ছাড়পত্র প্রদান",
+    "keywords": ["পরিবেশ", "দূষণ", "জলবায়ু", "environment"]
+  },
+  {
+    "name_bn": "জাতীয় মানবাধিকার কমিশন",
+    "name_en": "National Human Rights Commission",
+    "abbr": "NHRC",
+    "ministry": "সংবিধিবদ্ধ সংস্থা",
+    "type": "commission",
+    "role": "মানবাধিকার লঙ্ঘন তদন্ত",
+    "keywords": ["মানবাধিকার", "human rights"]
+  }
+]
